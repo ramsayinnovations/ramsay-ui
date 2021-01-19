@@ -18,13 +18,18 @@ const StyledButton = styled.button(
   ]
 );
 
-const Button = ({ children, ...props }) => {
-  return <StyledButton {...props}>{children}</StyledButton>;
+const Button = ({ as, children, ...props }) => {
+  return (
+    <StyledButton as={as} {...props}>
+      {children}
+    </StyledButton>
+  );
 };
 
 Button.propTypes = {
   className: PropTypes.any,
   children: PropTypes.string,
+  as: PropTypes.string,
   styles: PropTypes.shape({
     block: PropTypes.string,
     border: PropTypes.oneOf([
