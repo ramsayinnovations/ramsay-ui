@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import theme from "@/themes/theme";
 import styled from "styled-components";
 
-const StyledButton = styled.button(
+const Button = styled.button(
   ({ className, styles: { block, color, border, shape, size } = {} }) => [
     theme.button.default.base,
     theme.button.default.color,
@@ -18,14 +18,6 @@ const StyledButton = styled.button(
     className,
   ]
 );
-
-const Button = ({ as, children, ...props }) => {
-  return (
-    <StyledButton as={as} {...props}>
-      {children}
-    </StyledButton>
-  );
-};
 
 Button.propTypes = {
   className: PropTypes.any,
