@@ -9,7 +9,7 @@ const StyledButton = styled.button(
     theme.button.default.color,
     theme.button.default.hover,
     theme.button.default.focus,
-    block && tw`w-full h-full`,
+    block && tw`w-full`,
     color && theme.button.color[color],
     theme.button.border.base,
     border && theme.button.border[border],
