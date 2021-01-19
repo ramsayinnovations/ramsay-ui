@@ -1,32 +1,25 @@
 import PropTypes from "prop-types";
 import tw from "twin.macro";
 import theme from "@/themes/theme";
+import styled from "styled-components";
 
-const Button = ({
-  className,
-  children,
-  styles: { block, color, border, shape, size } = {},
-  ...props
-}) => {
-  return (
-    <button
-      css={[
-        theme.button.default.base,
-        theme.button.default.color,
-        theme.button.default.hover,
-        theme.button.default.focus,
-        block && tw`w-full h-full`,
-        color && theme.button.color[color],
-        border === "gray" && theme.button.border[border],
-        shape && theme.button.borderRadius[shape],
-        size && theme.button.size[size],
-        className,
-      ]}
-      {...props}
-    >
-      {children}
-    </button>
-  );
+const StyledButton = styled.button(
+  ({ className, styles: { block, color, border, shape, size } = {} }) => [
+    theme.button.default.base,
+    theme.button.default.color,
+    theme.button.default.hover,
+    theme.button.default.focus,
+    block && tw`w-full h-full`,
+    color && theme.button.color[color],
+    border === "gray" && theme.button.border[border],
+    shape && theme.button.borderRadius[shape],
+    size && theme.button.size[size],
+    className,
+  ]
+);
+
+const Button = ({ children, ...props }) => {
+  return <StyledButton {...props}>{children}</StyledButton>;
 };
 
 Button.propTypes = {
