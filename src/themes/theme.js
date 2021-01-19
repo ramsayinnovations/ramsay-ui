@@ -1,5 +1,7 @@
 import tw from "twin.macro";
 
+const greyAndGrayBorder = tw`border-gray-300 text-gray-700 bg-white-100 hover:bg-gray-50`;
+
 const theme = {
   button: {
     default: {
@@ -14,8 +16,9 @@ const theme = {
       danger: tw`bg-danger-600 hover:bg-danger-700 border-danger-600`,
     },
     border: {
-      gray: tw`border border-gray-300 text-gray-700 bg-white-100 hover:bg-gray-50`,
-      grey: tw`border border-gray-300 text-gray-700 bg-white-100 hover:bg-gray-50`,
+      base: tw`border`,
+      gray: greyAndGrayBorder,
+      grey: greyAndGrayBorder,
       transparent: tw`bg-transparent`,
       primary: tw`border-primary-500 hover:bg-primary-500 hover:text-gray-50`,
       success: tw`border-success-500 hover:bg-success-500 hover:text-gray-50`,
