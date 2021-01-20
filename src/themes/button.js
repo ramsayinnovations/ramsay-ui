@@ -36,4 +36,4 @@ const button = {
   },
 };
 
-export default theme;
+export default button;
