@@ -1,20 +1,20 @@
 import PropTypes from "prop-types";
 import tw from "twin.macro";
 import styled from "styled-components";
-import button from "@/themes/button";
+import theme from "@/themes/theme";
 
 const Button = styled.button(
   ({ block, border, color, shape, size, className }) => [
-    button.default.base,
-    button.default.color,
-    button.default.hover,
-    button.default.focus,
-    button.border.base,
+    theme.button.default.base,
+    theme.button.default.color,
+    theme.button.default.hover,
+    theme.button.default.focus,
+    theme.button.border.base,
     block && tw`w-full`,
-    border && button.border[border],
-    color && button.color[color],
-    shape && button.borderRadius[shape],
-    size && button.size[size],
+    border && theme.button.border[border],
+    color && theme.button.color[color],
+    shape && theme.button.borderRadius[shape],
+    size && theme.button.size[size],
     className,
   ]
 );
