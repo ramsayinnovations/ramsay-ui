@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import typography from "@/themes/typography";
+import theme from "@/themes/theme";
 import styled from "styled-components";
 
-const { title } = typography;
+const title = theme.typography.title;
 
 const Title = styled.h2(({ className, subtitle }) => [
   title.default.base,

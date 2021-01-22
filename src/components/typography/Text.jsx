@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import typography from "@/themes/typography";
+import theme from "@/themes/theme";
 import styled from "styled-components";
 
-const { text } = typography;
+const text = theme.typography.text;
 
 const Text = styled.div(({ className, paragraph, link }) => [
   text.default.base,

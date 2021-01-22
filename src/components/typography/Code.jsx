@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import typography from "@/themes/typography";
+import theme from "@/themes/theme";
 import styled from "styled-components";
 
-const { code } = typography;
+const code = theme.typography.code;
 
 const Code = styled.div(({ className }) => [
   code.default.base,
