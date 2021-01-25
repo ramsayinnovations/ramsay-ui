@@ -8,9 +8,9 @@ const Title = styled.h2(({ className, subtitle }) => [
   title.default.base,
   title.default.color,
   title.default.size,
-  subtitle && title.subtitle.base, // CAN YOU PLEASE MAKE
-  subtitle && title.subtitle.color, // THESE THREE LINES
-  subtitle && title.subtitle.size, // DRYer?  THANKS.
+  subtitle && title.subtitle.base,
+  subtitle && title.subtitle.color,
+  subtitle && title.subtitle.size,
   className,
 ]);
 
