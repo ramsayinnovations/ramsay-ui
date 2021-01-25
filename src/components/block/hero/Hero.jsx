@@ -10,6 +10,7 @@ const Hero = ({
   formTitle,
   buttonText,
   formTipText,
+  videUrl,
 }) => (
   <div css={[theme.hero.default.base, className]}>
     <div css={[theme.hero.default.grid]}>
@@ -68,7 +69,7 @@ const Hero = ({
       </div>
       <div css={[theme.hero.default.rightBlock.base]}>
         <div css={[theme.hero.default.rightBlock.videoBlock.base]}>
-          <ReactPlayer url="https://www.youtube.com/watch?v=ysz5S6PUM-U" />
+          <ReactPlayer url={videUrl} />
         </div>
       </div>
     </div>
@@ -86,6 +87,7 @@ Hero.propTypes = {
   formTitle: PropTypes.string,
   buttonText: PropTypes.string,
   formTipText: PropTypes.string,
+  videUrl: PropTypes.string,
 };
 
 export default Hero;

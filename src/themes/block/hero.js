@@ -26,7 +26,7 @@ const hero = {
     rightBlock: {
       base: tw`mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center`,
       videoBlock: {
-        base: tw`relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md`,
+        base: tw`relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md overflow-hidden`,
       },
     },
   },
