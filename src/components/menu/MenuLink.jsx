@@ -1,16 +1,28 @@
 import Link from "next/link";
-import tw from "twin.macro";
 import Text from "@/components/typography/Text";
+import PropTypes from "prop-types";
+import theme from "@/themes/theme";
 
-const MenuLink = ({ children, href, className }) => (
-  <Link hfre={href}>
+const MenuLink = ({ children, href, className, mobile }) => (
+  <Link href={href}>
     <a
       css={[
-        tw`text-base font-medium text-gray-500 hover:text-gray-900`,
+        theme.menu.link.base,
+        theme.menu.link.color,
+        mobile && theme.menu.link.mobile,
         className,
       ]}
     >
-      {children}
+      <Text>{children}</Text>
     </a>
   </Link>
 );
+
+MenuLink.propTypes = {
+  children: PropTypes.string,
+  href: PropTypes.string,
+  className: PropTypes.string,
+  mobile: PropTypes.bool,
+};
+
+export default MenuLink;
