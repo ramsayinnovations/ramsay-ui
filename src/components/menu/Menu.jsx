@@ -10,8 +10,8 @@ const Menu = styled.nav(({ className, desktop, mobile }) => [
 
 Menu.propTypes = {
   className: PropTypes.string,
-  desktop: PropTypes.string,
-  mobile: PropTypes.string,
+  desktop: PropTypes.bool,
+  mobile: PropTypes.bool,
 };
 
 export default Menu;
