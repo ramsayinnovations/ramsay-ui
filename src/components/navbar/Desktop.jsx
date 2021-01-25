@@ -26,7 +26,7 @@ export const Desktop = ({
   );
 };
 
-Navbar.propTypes = {
+Desktop.propTypes = {
   className: PropTypes.string,
   children: PropTypes.string,
   height: PropTypes.string,
@@ -35,4 +35,4 @@ Navbar.propTypes = {
   sticky: PropTypes.string,
 };
 
-export default Navbar;
+export default Desktop;
