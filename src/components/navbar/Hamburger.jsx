@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import tw from "twin.macro";
-import navbar from "@/themes/navbar";
+import theme from "@/themes/theme";
 import MenuSvg from "@/assets/svg/hamburger__menu.svg";
 
 const Hamburger = ({
@@ -15,14 +15,16 @@ const Hamburger = ({
         onClick={() => setMobileMenuOpen(true)}
         css={[
           tw`inline-flex items-center justify-center`,
-          navbar.hamburger.base,
-          navbar.hamburger.bg,
-          navbar.hamburger.focus,
+          theme.navbar.hamburger.base,
+          theme.navbar.hamburger.bg,
+          theme.navbar.hamburger.focus,
         ]}
       >
         <span className="sr-only">{srOnly}</span>
         {/* Heroicon name: menu */}
-        <MenuSvg css={[navbar.hamburger.color, navbar.hamburger.size]} />
+        <MenuSvg
+          css={[theme.navbar.hamburger.color, theme.navbar.hamburger.size]}
+        />
       </button>
     </div>
   );

@@ -1,5 +1,6 @@
 import tw from "twin.macro";
 import menu from "./menu";
+import navbar from "./navbar";
 
 const borderGrey = tw`border-gray-300 text-gray-700 bg-white-100 hover:bg-gray-50`;
 
@@ -38,6 +39,7 @@ const theme = {
     },
   },
   menu: menu,
+  navbar: navbar,
 };
 
 export default theme;

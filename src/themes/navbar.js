@@ -15,6 +15,14 @@ const navbar = {
     color: tw`text-gray-400 hover:text-gray-500`,
     focus: tw`focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-700`,
   },
+  mobile: {
+    base: tw`absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden`,
+    wrapper: tw`rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50`,
+    main: tw`pt-5 pb-6 px-5`,
+  },
+  mobileHeader: {
+    base: tw`flex items-center justify-between`,
+  },
 };
 
 export default navbar;
