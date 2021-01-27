@@ -12,25 +12,21 @@ const Textarea = ({
 }) => (
   <div css={[classes.wrapper]}>
     {label && (
-      <label htmlFor={name} css={[theme.textarea.default.label, classes.label]}>
+      <label htmlFor={name} css={[theme.textarea.label, classes.label]}>
         {label}
       </label>
     )}
-    <div
-      css={[theme.textarea.default.textareaWrapper, classes.textareaWrapper]}
-    >
+    <div css={[theme.textarea.textareaWrapper, classes.textareaWrapper]}>
       <textarea
         id={id}
         name={name}
         rows={rows || 3}
-        css={[theme.textarea.default.textarea, classes.textarea]}
+        css={[theme.textarea.textarea, classes.textarea]}
         placeholder={placeholder}
       ></textarea>
     </div>
     {helpText && (
-      <p css={[theme.textarea.default.helpText, classes.helpText]}>
-        {helpText}
-      </p>
+      <p css={[theme.textarea.helpText, classes.helpText]}>{helpText}</p>
     )}
   </div>
 );
