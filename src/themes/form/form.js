@@ -13,6 +13,12 @@ const form = {
     space: tw`space-y-1`,
     focus: tw`focus:ring-primary-500 focus:border-primary-500`,
     error: tw`border-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500`,
+    col: {
+      full: tw`col-span-6`,
+      half: tw`col-span-6 sm:col-span-3`,
+      third: tw`col-span-6 sm:col-span-3 lg:col-span-2`,
+      "two-thirds": tw`col-span-6 sm:col-span-4`,
+    },
   },
   help: {
     color: tw`text-gray-500`,

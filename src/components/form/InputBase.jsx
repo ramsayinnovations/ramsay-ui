@@ -13,21 +13,8 @@ const InputBase = ({
   name,
   placeholder,
 }) => {
-  // I want to create a `col` prop that will output tailwindcss classes to the base div as follows:
-  // `col === "1": `col-span-6`
-  // `col === "1/2"`: `col-span-6 sm:col-span-3`
-  // `col === "1/3"`: `col-span-6 sm:col-span-3 lg:col-span-2`
-  // `col === "2/3": `col-span-6 sm:col-span-4`
-
-  // alternative syntax:
-
-  // `col === "full": same as `col === "1"
-  // `col === "half": same as `col === "1/2"
-  // `col === "third": same as `col === "1/3"
-  // `col === "two-thirds": same as `col === "2/3"
-
   return (
-    <div className={[wrapper]}>
+    <div className={[wrapper, col && input.col[col]]}>
       <input
         type="text"
         name={name}
@@ -52,7 +39,7 @@ const InputBase = ({
 
 InputBase.propTypes = {
   className: PropTypes.string,
-  col: PropTypes.string,
+  col: PropTypes.oneOf(["full", "half", "third", "two-thirds"]),
   hasError: PropTypes.bool,
   wrapper: PropTypes.string,
   name: PropTypes.string,
