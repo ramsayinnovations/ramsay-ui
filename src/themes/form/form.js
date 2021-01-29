@@ -7,12 +7,12 @@ const form = {
     size: tw`text-sm`,
   },
   input: {
-    base: tw`block w-full shadow-sm`,
+    base: tw`block w-full `,
     border: tw`border-gray-300 rounded-md`,
     size: tw`sm:text-sm`,
     space: tw`space-y-1`,
-    focus: tw`focus:ring-primary-500 focus:border-primary-500`,
-    error: tw`border-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500`,
+    focus: tw``,
+    error: tw`border-red-300  focus:ring-red-500 focus:border-red-500`,
     col: {
       full: tw`col-span-6`,
       half: tw`col-span-6 sm:col-span-3`,
