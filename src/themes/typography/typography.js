@@ -18,8 +18,14 @@ const typography = {
   text: {
     default: {
       base: tw``,
+      color: tw``,
+      size: tw``,
     },
-    paragraph: {},
+    paragraph: {
+      base: tw``,
+      color: tw``,
+      size: tw``,
+    },
     link: {
       default: {
         base: tw`font-medium`,
@@ -31,6 +37,8 @@ const typography = {
   code: {
     default: {
       base: tw``,
+      color: tw``,
+      size: tw``,
     },
   },
 };
