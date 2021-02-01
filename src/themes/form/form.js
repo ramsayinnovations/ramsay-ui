@@ -6,6 +6,7 @@ const thirdCol = tw`col-span-6 sm:col-span-3 lg:col-span-2`;
 const twoThirdsCol = tw`col-span-6 sm:col-span-4`;
 
 const form = {
+  base: tw`grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6`,
   label: {
     base: tw`block font-medium`,
     color: tw`text-gray-700`,
