@@ -19,8 +19,8 @@ const Text = styled.div(({ className, paragraph, link }) => [
 
 Text.propTypes = {
   className: PropTypes.any,
-  link: PropTypes.string,
-  paragraph: PropTypes.string,
+  link: PropTypes.bool,
+  paragraph: PropTypes.bool,
 };
 
 export default Text;

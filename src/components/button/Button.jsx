@@ -22,7 +22,7 @@ const Button = styled.button(
 Button.propTypes = {
   children: PropTypes.string,
   className: PropTypes.any,
-  block: PropTypes.string,
+  block: PropTypes.bool,
   border: PropTypes.oneOf([
     "gray",
     "grey",
