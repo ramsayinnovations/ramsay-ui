@@ -1,9 +1,9 @@
 import tw from "twin.macro";
 
-const fullCol = tw`col-span-6`
-const halfCol = tw`col-span-6 sm:col-span-3`
-const thirdCol = tw`col-span-6 sm:col-span-3 lg:col-span-2`,
-const twoThirdsCol = tw`col-span-6 sm:col-span-4`
+const fullCol = tw`col-span-6`;
+const halfCol = tw`col-span-6 sm:col-span-3`;
+const thirdCol = tw`col-span-6 sm:col-span-3 lg:col-span-2`;
+const twoThirdsCol = tw`col-span-6 sm:col-span-4`;
 
 const form = {
   label: {
@@ -23,10 +23,10 @@ const form = {
       half: halfCol,
       third: thirdCol,
       twoThirds: twoThirdsCol,
-      '1': fullCol,
-      '1/2': halfCol,
-      '1/3': thirdCol,
-      '2/3': twoThirdsCol
+      1: fullCol,
+      "1/2": halfCol,
+      "1/3": thirdCol,
+      "2/3": twoThirdsCol,
     },
   },
   help: {
