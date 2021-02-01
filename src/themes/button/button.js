@@ -11,7 +11,7 @@ const button = {
   },
   color: {
     primary: tw`bg-blue-500 hover:bg-blue-600 border-blue-500`,
-    success: tw`bg-success-500 hover:bg-success-600 border-success-500`,
+    success: tw`bg-green-500 hover:bg-green-600 border-green-500`,
     danger: tw`bg-danger-600 hover:bg-danger-700 border-danger-600`,
   },
   border: {
@@ -20,7 +20,7 @@ const button = {
     grey: borderGrey,
     transparent: tw`bg-transparent`,
     primary: tw`border-blue-500 hover:bg-blue-500 hover:text-gray-50`,
-    success: tw`border-success-500 hover:bg-success-500 hover:text-gray-50`,
+    success: tw`border-green-500 hover:bg-green-500 hover:text-gray-50`,
     danger: tw`border-danger-500 hover:bg-danger-500 hover:text-gray-50`,
   },
   borderRadius: {
