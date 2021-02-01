@@ -17,9 +17,10 @@ module.exports = {
       "module-resolver",
       {
         root: ["./src"],
+        extensions: [".jsx", ".js", ".json"],
         alias: {
-          "@/components/*": "./components/*",
-          "@/themes/*": "./themes/*",
+          "@/components": "./src/components",
+          "@/themes": "./src/themes",
         },
       },
     ],
