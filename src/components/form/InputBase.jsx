@@ -39,7 +39,16 @@ const InputBase = ({
 
 InputBase.propTypes = {
   className: PropTypes.string,
-  col: PropTypes.oneOf(["full", "half", "third", "two-thirds"]),
+  col: PropTypes.oneOf([
+    "full",
+    "half",
+    "third",
+    "twoThirds",
+    "1",
+    "1/2",
+    "1/3",
+    "2/3",
+  ]),
   hasError: PropTypes.bool,
   wrapper: PropTypes.string,
   name: PropTypes.string,
