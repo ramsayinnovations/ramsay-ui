@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import theme from "@/themes/theme";
 import Label from "./Label";
 import Help from "./Help";
 import Error from "./Error";
+import TextareaBase from "./TextareaBase";
 
 const Textarea = ({
   classes = {},
@@ -20,15 +20,13 @@ const Textarea = ({
         {label}
       </Label>
     )}
-    <div css={[theme.textarea.textareaWrapper, classes.textareaWrapper]}>
-      <textarea
-        id={id}
-        name={name || id}
-        rows={rows || 3}
-        css={[theme.textarea.textarea, classes.textarea]}
-        placeholder={placeholder}
-      ></textarea>
-    </div>
+    <TextareaBase
+      classes={classes.textarea}
+      name={name}
+      id={id}
+      rows={rows}
+      placeholder={placeholder}
+    />
     {help && (
       <Help name={name} className={classes.help}>
         {help}
@@ -46,8 +44,10 @@ Textarea.propTypes = {
   classes: PropTypes.shape({
     base: PropTypes.string,
     label: PropTypes.string,
-    textareaWrapper: PropTypes.string,
-    textarea: PropTypes.string,
+    textarea: PropTypes.shape({
+      base: PropTypes.string,
+      wrapper: PropTypes.string,
+    }),
     help: PropTypes.string,
     error: PropTypes.string,
   }),
