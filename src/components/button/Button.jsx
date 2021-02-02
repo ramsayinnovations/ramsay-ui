@@ -20,7 +20,7 @@ const Button = styled.button(
 );
 
 Button.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.string.isRequired,
   className: PropTypes.any,
   block: PropTypes.string,
   border: PropTypes.oneOf([

@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 import theme from "@/themes/theme";
 
-const Textarea = ({ className, children, id, name, onSubmit, onReset }) => (
+const Form = ({ className, children, id, name, onSubmit, onReset }) => (
   <form
     css={[theme.form.base, className]}
     id={id}
-    name={name}
+    name={name || id}
     onSubmit={onSubmit}
     onReset={onReset}
   >
@@ -13,16 +13,16 @@ const Textarea = ({ className, children, id, name, onSubmit, onReset }) => (
   </form>
 );
 
-Textarea.propTypes = {
+Form.propTypes = {
   className: PropTypes.string,
   children: PropTypes.oneOf([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string),
-  ]),
-  id: PropTypes.string,
+  ]).isRequired,
+  id: PropTypes.string.isRequired,
   name: PropTypes.string,
-  onSubmit: PropTypes.func,
-  onReset: PropTypes.func,
+  onSubmit: PropTypes.func.isRequired,
+  onReset: PropTypes.func.isRequired,
 };
 
-export default Textarea;
+export default Form;
