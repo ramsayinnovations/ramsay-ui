@@ -1,49 +1,62 @@
 import PropTypes from "prop-types";
 import theme from "@/themes/theme";
+import Label from "./Label";
+import Help from "./Help";
+import Error from "./Error";
 
 const Textarea = ({
   classes = {},
   label,
-  helpText,
+  help,
   id,
   name,
   rows,
   placeholder,
+  error,
 }) => (
-  <div css={[classes.wrapper]}>
+  <div css={[classes.base]}>
     {label && (
-      <label htmlFor={name} css={[theme.textarea.label, classes.label]}>
+      <Label name={name} className={classes.label}>
         {label}
-      </label>
+      </Label>
     )}
     <div css={[theme.textarea.textareaWrapper, classes.textareaWrapper]}>
       <textarea
         id={id}
-        name={name}
+        name={name || id}
         rows={rows || 3}
         css={[theme.textarea.textarea, classes.textarea]}
         placeholder={placeholder}
       ></textarea>
     </div>
-    {helpText && (
-      <p css={[theme.textarea.helpText, classes.helpText]}>{helpText}</p>
+    {help && (
+      <Help name={name} className={classes.help}>
+        {help}
+      </Help>
+    )}
+    {error && (
+      <Error name={name} className={classes.error}>
+        {error}
+      </Error>
     )}
   </div>
 );
 
 Textarea.propTypes = {
   classes: PropTypes.shape({
-    wrapper: PropTypes.string,
+    base: PropTypes.string,
     label: PropTypes.string,
     textareaWrapper: PropTypes.string,
     textarea: PropTypes.string,
-    helpText: PropTypes.string,
+    help: PropTypes.string,
+    error: PropTypes.string,
   }),
   label: PropTypes.string,
-  helpText: PropTypes.string,
+  help: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,
   rows: PropTypes.number,
+  error: PropTypes.string,
   placeholder: PropTypes.string,
 };
 
