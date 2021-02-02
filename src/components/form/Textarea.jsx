@@ -6,13 +6,13 @@ import TextareaBase from "./TextareaBase";
 
 const Textarea = ({
   classes = {},
-  label,
+  error,
   help,
   id,
+  label,
   name,
-  rows,
   placeholder,
-  error,
+  rows,
 }) => (
   <div css={[classes.base]}>
     {label && (
@@ -51,13 +51,13 @@ Textarea.propTypes = {
     help: PropTypes.string,
     error: PropTypes.string,
   }),
-  label: PropTypes.string,
+  error: PropTypes.string,
   help: PropTypes.string,
   id: PropTypes.string,
+  label: PropTypes.string,
   name: PropTypes.string,
-  rows: PropTypes.number,
-  error: PropTypes.string,
   placeholder: PropTypes.string,
+  rows: PropTypes.number,
 };
 
 export default Textarea;

@@ -2,7 +2,7 @@ import { Listbox } from "@headlessui/react";
 import theme from "@/themes/theme";
 import PropTypes from "prop-types";
 
-const SelectButton = ({ value, className }) => (
+const SelectButton = ({ className, value }) => (
   <Listbox.Button css={[theme.select.button.base, className]}>
     <span css={[theme.select.button.value]}>{value}</span>
     <span css={[theme.select.button.iconWrapper]}>
@@ -24,9 +24,8 @@ const SelectButton = ({ value, className }) => (
 );
 
 SelectButton.propTypes = {
-  value: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
   className: PropTypes.string,
+  value: PropTypes.string.isRequired,
 };
 
 export default SelectButton;

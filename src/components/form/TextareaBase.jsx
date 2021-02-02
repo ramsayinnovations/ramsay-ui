@@ -1,7 +1,7 @@
 import theme from "@/themes/theme";
 import PropTypes from "prop-types";
 
-const TextareaBase = ({ id, name, rows, placeholder, classes = {} }) => (
+const TextareaBase = ({ classes = {}, id, name, placeholder, rows }) => (
   <div css={[theme.textarea.wrapper, classes.wrapper]}>
     <textarea
       id={id}
@@ -20,8 +20,8 @@ TextareaBase.propTypes = {
   }),
   id: PropTypes.string,
   name: PropTypes.string,
-  rows: PropTypes.number,
   placeholder: PropTypes.string,
+  rows: PropTypes.number,
 };
 
 export default TextareaBase;
