@@ -9,9 +9,9 @@ const SelectOptions = ({ list, open }) => (
     leave="transition ease-in duration-100"
     leaveFrom="opacity-100"
     leaveTo="opacity-0"
-    css={[theme.select.transition]}
+    css={[theme.select.options.transition]}
   >
-    <Listbox.Options static css={[theme.select.listBox.base]}>
+    <Listbox.Options static css={[theme.select.options.base]}>
       {list.map((el, index) => (
         <SelectOption key={index} el={el} />
       ))}

@@ -7,16 +7,16 @@ const SelectOption = ({ el }) => (
     {({ selected, active }) => (
       <div
         css={[
-          theme.select.listBox.item.base,
-          theme.select.listBox.item.color.default,
-          active && theme.select.listBox.item.color.active,
+          theme.select.option.base,
+          theme.select.option.color.default,
+          active && theme.select.option.color.active,
         ]}
       >
         <span
           css={[
-            theme.select.listBox.item.value.base,
-            theme.select.listBox.item.value.color.default,
-            selected && theme.select.listBox.item.value.color.selected,
+            theme.select.option.value.base,
+            theme.select.option.value.color.default,
+            selected && theme.select.option.value.color.selected,
           ]}
         >
           {el}
@@ -24,13 +24,13 @@ const SelectOption = ({ el }) => (
         {selected && (
           <span
             css={[
-              theme.select.listBox.item.selectedValue.base,
-              theme.select.listBox.item.selectedValue.default,
-              active && theme.select.listBox.item.selectedValue.active,
+              theme.select.option.selectedValue.base,
+              theme.select.option.selectedValue.default,
+              active && theme.select.option.selectedValue.active,
             ]}
           >
             <svg
-              css={[theme.select.listBox.item.selectedValue.svg]}
+              css={[theme.select.option.selectedValue.svg]}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"

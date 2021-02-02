@@ -6,10 +6,10 @@ import SelectButton from "./SelectButton";
 import SelectOptions from "./SelectOptions";
 
 const Select = ({ classes = {}, label, value, onChange, list }) => (
-  <div css={[theme.select.wrapper, classes.base]}>
+  <div css={[theme.select.base, classes.base]}>
     <Listbox
       as="div"
-      css={[theme.select.select]}
+      css={[theme.select.listBox]}
       value={value}
       onChange={onChange}
     >
@@ -19,7 +19,7 @@ const Select = ({ classes = {}, label, value, onChange, list }) => (
             {label}
           </Label>
           <div css={[theme.select.main]}>
-            <span css={[theme.select.button.wrapper]}>
+            <span css={[theme.select.buttonWrapper]}>
               <SelectButton value={value} />
             </span>
             <SelectOptions open={open} list={list} />
