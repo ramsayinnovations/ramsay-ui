@@ -1,50 +1,63 @@
 import PropTypes from "prop-types";
-import theme from "@/themes/theme";
+import Label from "./Label";
+import Help from "./Help";
+import Error from "./Error";
+import TextareaBase from "./TextareaBase";
 
 const Textarea = ({
   classes = {},
-  label,
-  helpText,
+  error,
+  help,
   id,
+  label,
   name,
-  rows,
   placeholder,
+  rows,
 }) => (
-  <div css={[classes.wrapper]}>
+  <div css={[classes.base]}>
     {label && (
-      <label htmlFor={name} css={[theme.textarea.label, classes.label]}>
+      <Label name={name} className={classes.label}>
         {label}
-      </label>
+      </Label>
     )}
-    <div css={[theme.textarea.textareaWrapper, classes.textareaWrapper]}>
-      <textarea
-        id={id}
-        name={name}
-        rows={rows || 3}
-        css={[theme.textarea.textarea, classes.textarea]}
-        placeholder={placeholder}
-      ></textarea>
-    </div>
-    {helpText && (
-      <p css={[theme.textarea.helpText, classes.helpText]}>{helpText}</p>
+    <TextareaBase
+      classes={classes.textarea}
+      name={name}
+      id={id}
+      rows={rows}
+      placeholder={placeholder}
+    />
+    {help && (
+      <Help name={name} className={classes.help}>
+        {help}
+      </Help>
+    )}
+    {error && (
+      <Error name={name} className={classes.error}>
+        {error}
+      </Error>
     )}
   </div>
 );
 
 Textarea.propTypes = {
   classes: PropTypes.shape({
-    wrapper: PropTypes.string,
+    base: PropTypes.string,
     label: PropTypes.string,
-    textareaWrapper: PropTypes.string,
-    textarea: PropTypes.string,
-    helpText: PropTypes.string,
+    textarea: PropTypes.shape({
+      base: PropTypes.string,
+      wrapper: PropTypes.string,
+    }),
+    help: PropTypes.string,
+    error: PropTypes.string,
   }),
-  label: PropTypes.string,
-  helpText: PropTypes.string,
+  error: PropTypes.string,
+  help: PropTypes.string,
   id: PropTypes.string,
+  label: PropTypes.string,
   name: PropTypes.string,
-  rows: PropTypes.number,
   placeholder: PropTypes.string,
+  rows: PropTypes.number,
 };
 
 export default Textarea;

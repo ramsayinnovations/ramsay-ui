@@ -9,9 +9,9 @@ const InputBase = ({
   className,
   col,
   hasError,
-  wrapper,
   name,
   placeholder,
+  wrapper,
 }) => {
   return (
     <div className={[wrapper, col && input.col[col]]}>
@@ -50,9 +50,9 @@ InputBase.propTypes = {
     "2/3",
   ]),
   hasError: PropTypes.bool,
-  wrapper: PropTypes.string,
   name: PropTypes.string,
   placeholder: PropTypes.string,
+  wrapper: PropTypes.string,
 };
 
 export default InputBase;
