@@ -4,7 +4,7 @@ import styled from "styled-components";
 import theme from "@/themes/theme";
 
 const Button = styled.button(
-  ({ block, border, color, shape, size, className }) => [
+  ({ block, border, color, className, shape, size }) => [
     theme.button.default.base,
     theme.button.default.color,
     theme.button.default.hover,
@@ -20,8 +20,6 @@ const Button = styled.button(
 );
 
 Button.propTypes = {
-  children: PropTypes.string,
-  className: PropTypes.any,
   block: PropTypes.string,
   border: PropTypes.oneOf([
     "gray",
@@ -32,6 +30,8 @@ Button.propTypes = {
     "danger",
   ]),
   color: PropTypes.oneOf(["primary", "success", "danger"]),
+  children: PropTypes.string,
+  className: PropTypes.any,
   shape: PropTypes.oneOf(["flat", "pill", "rounded"]),
   size: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl"]),
 };
