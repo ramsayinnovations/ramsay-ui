@@ -3,7 +3,7 @@ import tw from "twin.macro";
 const navbar = {
   close: {
     base: tw`p-2 rounded-md`,
-    bg: tw`bg-white hover:bg-grey-100`,
+    bg: tw`bg-white hover:bg-gray-100`,
     color: tw`text-blue-700 hover:text-blue-800`,
     focus: tw`focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-700`,
     size: tw`text-lg md:text-2xl`,
