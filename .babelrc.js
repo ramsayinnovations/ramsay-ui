@@ -13,6 +13,7 @@ module.exports = {
   plugins: [
     "@emotion/babel-plugin",
     "babel-plugin-macros",
+    "inline-react-svg",
     [
       "module-resolver",
       {
