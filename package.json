@@ -4,7 +4,8 @@
   "description": "",
   "main": "./lib/index.js",
   "scripts": {
-    "build": "rm -rf lib && babel src -d lib"
+    "build": "rm -rf lib && babel src -d lib",
+    "postinstall": "rm -rf lib && babel src -d lib"
   },
   "repository": {
     "type": "git",
