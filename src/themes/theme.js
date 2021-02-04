@@ -1,6 +1,5 @@
-import tw from "twin.macro";
-import menu from "./menu";
-import navbar from "./navbar";
+import menu from "./menu/menu";
+import navbar from "./navbar/navbar";
 import typography from "./typography/typography";
 import button from "./button/button";
 import form from "./form/form";
@@ -20,7 +19,7 @@ const theme = {
   card: card,
   menu: menu,
   navbar: navbar,
-  hero: hero
+  hero: hero,
 };
 
 export default theme;
