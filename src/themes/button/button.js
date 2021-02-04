@@ -10,7 +10,7 @@ const button = {
     focus: tw`focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`,
   },
   color: {
-    primary: tw`bg-primary-500 hover:bg-primary-600 border-primary-500`,
+    primary: tw`bg-blue-500 hover:bg-blue-600 border-blue-500`,
     success: tw`bg-green-500 hover:bg-green-600 border-green-500`,
     danger: tw`bg-red-600 hover:bg-red-700 border-red-600`,
   },
@@ -19,7 +19,7 @@ const button = {
     gray: borderGrey,
     grey: borderGrey,
     transparent: tw`bg-transparent`,
-    primary: tw`border-primary-500 hover:bg-primary-500 hover:text-gray-50`,
+    primary: tw`border-blue-500 hover:bg-blue-500 hover:text-gray-50`,
     success: tw`border-green-500 hover:bg-green-500 hover:text-gray-50`,
     danger: tw`border-red-500 hover:bg-red-500 hover:text-gray-50`,
   },

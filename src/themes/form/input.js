@@ -10,7 +10,7 @@ const input = {
   border: tw`border-gray-300 rounded-md`,
   size: tw`sm:text-sm`,
   space: tw`space-y-1`,
-  focus: tw`focus:ring-primary-500 focus:border-primary-500`,
+  focus: tw`focus:ring-blue-500 focus:border-blue-500`,
   error: tw`border-red-300 focus:outline-none focus:ring-red-500 focus:border-red-500`,
   col: {
     full: fullCol,

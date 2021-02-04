@@ -4,8 +4,8 @@ const navbar = {
   close: {
     base: tw`p-2 rounded-md`,
     bg: tw`bg-white hover:bg-grey-100`,
-    color: tw`text-primary-700 hover:text-primary-800`,
-    focus: tw`focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-700`,
+    color: tw`text-blue-700 hover:text-blue-800`,
+    focus: tw`focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-700`,
     size: tw`text-lg md:text-2xl`,
     wrapper: tw``,
   },
@@ -13,7 +13,7 @@ const navbar = {
     base: tw`p-2 rounded-md`,
     bg: tw`bg-white hover:bg-gray-100`,
     color: tw`text-gray-400 hover:text-gray-500`,
-    focus: tw`focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-700`,
+    focus: tw`focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-700`,
   },
   mobile: {
     base: tw`absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden`,
