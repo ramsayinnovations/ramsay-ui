@@ -7,7 +7,7 @@ const select = {
   main: tw`relative`,
   buttonWrapper: tw`inline-block w-full rounded-md shadow-sm`,
   button: {
-    base: tw`cursor-default relative w-full rounded-md border border-gray-300 bg-white pl-3 pr-10 py-2 text-left focus:outline-none focus:shadow focus:outline-blue focus:border-blue-300 transition ease-in-out duration-150 sm:text-sm sm:leading-5`,
+    base: tw`cursor-default relative w-full rounded-md border border-gray-300 bg-white pl-3 pr-10 py-2 text-left focus:outline-none focus:shadow focus:border-blue-300 transition ease-in-out duration-150 sm:text-sm sm:leading-5`,
     value: tw`block truncate`,
     iconWrapper: tw`absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none`,
     icon: tw`h-5 w-5 text-gray-400`,
