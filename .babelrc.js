@@ -10,5 +10,20 @@ module.exports = {
       },
     ],
   ],
-  plugins: ["@emotion/babel-plugin", "babel-plugin-macros"],
+  plugins: [
+    "@emotion/babel-plugin",
+    "babel-plugin-macros",
+    [
+      "module-resolver",
+      {
+        root: ["./src"],
+        extensions: [".jsx", ".js", ".json"],
+        alias: {
+          "@/components": "./src/components",
+          "@/themes": "./src/themes",
+        },
+      },
+    ],
+  ],
+  ignore: ["node_modules"],
 };
