@@ -16,7 +16,7 @@ const Title = styled.h2(({ className, subtitle }) => [
 
 Title.propTypes = {
   className: PropTypes.any,
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.bool,
 };
 
 export default Title;
