@@ -30,7 +30,7 @@ const InputBase = ({
           className,
         ]}
         placeholder={placeholder}
-        ariaInvalid={!!hasError}
+        aria-invalid={!!hasError}
         ariaDescribedby={`${name}-error`}
       />
     </div>
