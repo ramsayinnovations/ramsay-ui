@@ -5,9 +5,11 @@ import Label from "./Label";
 import SelectButton from "./SelectButton";
 import SelectOptions from "./SelectOptions";
 
-const Select = ({ classes = {}, label, list, onChange, value }) => (
+const Select = ({ classes = {}, id, label, list, name, onChange, value }) => (
   <div css={[theme.select.base, classes.base]}>
     <Listbox
+      id={id}
+      name={name | id}
       as="div"
       css={[theme.select.listBox]}
       value={value}
@@ -35,8 +37,10 @@ Select.propTypes = {
     base: PropTypes.string,
     label: PropTypes.string,
   }),
+  id: PropTypes.string,
   label: PropTypes.string,
   list: PropTypes.arrayOf(PropTypes.string),
+  name: PropTypes.string,
   onChange: PropTypes.func,
   value: PropTypes.string,
 };
