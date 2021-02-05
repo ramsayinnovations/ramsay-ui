@@ -10,7 +10,6 @@ import CardItem from "./card/CardItem";
 
 // design
 import Curve from "./design/Curve";
-import HorizontalDivider from "./design/HorizontalDivider";
 import Pattern from "./design/Pattern";
 
 // form
@@ -46,7 +45,6 @@ export {
   Card,
   CardItem,
   Curve,
-  HorizontalDivider,
   Pattern,
   Form,
   Input,

@@ -1,31 +1,30 @@
 import PropTypes from "prop-types";
 
-const patterns = {
-  right: "/img/pattern__contact--right.svg",
-  "right-curve": "/img/pattern__cta--right.svg",
-  left: "/img/pattern__contact--left.svg",
-  "left-curve": "/img/pattern__cta--left.svg",
-  "mobile-curve": "/img/pattern__cta--right-sm.svg",
+const Pattern = ({ classes = {}, src, alt, width, height, layout }) => {
+  return (
+    <div css={[classes.wrapper]}>
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        layout={layout}
+        css={[classes.img]}
+      />
+    </div>
+  );
 };
 
-const Pattern = ({ classes = {}, type }) => (
-  <div className={classes.wrapper}>
-    <img src={patterns[type]} className={classes.img} />
-  </div>
-);
-
 Pattern.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string,
+  layout: PropTypes.string,
+  width: PropTypes.number,
+  height: PropTypes.number,
   classes: PropTypes.shape({
     wrapper: PropTypes.any,
     img: PropTypes.any,
   }),
-  type: PropTypes.oneOf([
-    "right",
-    "right-curve",
-    "left",
-    "left-curve",
-    "mobile-curve",
-  ]).isRequired,
 };
 
 export default Pattern;
