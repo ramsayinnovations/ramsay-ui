@@ -14,7 +14,7 @@ const InputBase = ({
   wrapper,
 }) => {
   return (
-    <div className={[wrapper, col && input.col[col]]}>
+    <div css={[wrapper, col && input.col[col]]}>
       <input
         type="text"
         name={name}

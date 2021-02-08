@@ -6,7 +6,7 @@ import InputBase from "./InputBase";
 import Label from "./Label";
 
 const Input = ({ classes = {}, error, help, label, name, placeholder }) => (
-  <div className={classes.base}>
+  <div css={classes.base}>
     {label && (
       <Label name={name} className={classes.label}>
         {label}
