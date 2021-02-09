@@ -7,7 +7,7 @@ import textarea from "./textarea";
 import tw from "twin.macro";
 
 const form = {
-  base: tw``,
+  base: tw`grid`,
   label: label,
   input: input,
   help: help,
