@@ -8,6 +8,7 @@ const {
 const InputBase = ({
   className,
   col,
+  register,
   hasError,
   name,
   placeholder,
@@ -16,6 +17,7 @@ const InputBase = ({
   return (
     <div css={[wrapper, col && input.col[col]]}>
       <input
+        ref={register}
         type="text"
         name={name}
         id={name}
@@ -50,6 +52,7 @@ InputBase.propTypes = {
     "2/3",
   ]),
   hasError: PropTypes.bool,
+  register: PropTypes.any,
   name: PropTypes.string,
   placeholder: PropTypes.string,
   wrapper: PropTypes.string,

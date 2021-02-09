@@ -5,7 +5,15 @@ import Help from "./Help";
 import InputBase from "./InputBase";
 import Label from "./Label";
 
-const Input = ({ classes = {}, error, help, label, name, placeholder }) => (
+const Input = ({
+  classes = {},
+  error,
+  register,
+  help,
+  label,
+  name,
+  placeholder,
+}) => (
   <div css={classes.base}>
     {label && (
       <Label name={name} className={classes.label}>
@@ -17,6 +25,7 @@ const Input = ({ classes = {}, error, help, label, name, placeholder }) => (
       wrapper={classes.wrapper}
       hasError={!!error}
       name={name}
+      register={register}
       placeholder={placeholder}
     />
     {help && (
@@ -42,6 +51,7 @@ Input.propTypes = {
     wrapper: PropTypes.string,
   }),
   error: PropTypes.string,
+  register: PropTypes.any,
   help: PropTypes.string,
   label: PropTypes.string,
   name: PropTypes.string,
