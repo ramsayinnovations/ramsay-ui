@@ -30,7 +30,8 @@ Button.propTypes = {
     "danger",
   ]),
   color: PropTypes.oneOf(["primary", "success", "danger"]),
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOf(PropTypes.string, PropTypes.arrayOf(PropTypes.any))
+    .isRequired,
   className: PropTypes.any,
   shape: PropTypes.oneOf(["flat", "pill", "rounded"]),
   size: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl"]),
