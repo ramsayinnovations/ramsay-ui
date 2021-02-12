@@ -1,5 +1,5 @@
 // avatar
-import Avatar from "./avatar/avatar";
+import Avatar from "./avatar/Avatar";
 
 // button
 import Button from "./button/Button";
