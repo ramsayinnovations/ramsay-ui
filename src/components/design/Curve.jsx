@@ -26,12 +26,14 @@ const Curve = ({ bottom, invert, className, wrapper }) => {
       {invert ? (
         <CurveInvertedSvg
           css={[tw`relative block fill-current`, className]}
-          // style={{ width: "calc(100% + 1.3px" }}
+          // style={{ width: "calc(100% + 1.3px)" }}
+          style={{ width: "100%" }}
         />
       ) : (
         <CurveSvg
           css={[tw`relative block fill-current`, className]}
-          // style={{ width: "calc(100% + 1.3px" }}
+          // style={{ width: "calc(100% + 1.3px)" }}
+          style={{ width: "100%" }}
         />
       )}
     </div>
