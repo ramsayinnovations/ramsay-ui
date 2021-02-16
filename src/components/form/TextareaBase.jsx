@@ -5,9 +5,17 @@ const {
   form: { textarea },
 } = theme;
 
-const TextareaBase = ({ classes = {}, id, name, placeholder, rows }) => (
+const TextareaBase = ({
+  classes = {},
+  id,
+  name,
+  placeholder,
+  rows,
+  register,
+}) => (
   <div css={[textarea.wrapper, classes.wrapper]}>
     <textarea
+      ref={register}
       id={id}
       name={name || id}
       rows={rows || 3}
@@ -26,6 +34,7 @@ TextareaBase.propTypes = {
   name: PropTypes.string,
   placeholder: PropTypes.string,
   rows: PropTypes.number,
+  register: PropTypes.any,
 };
 
 export default TextareaBase;

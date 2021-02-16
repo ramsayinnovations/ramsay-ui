@@ -9,15 +9,16 @@ const {
   form: { select },
 } = theme;
 
-const Select = ({ classes = {}, id, label, list, name, onChange, value }) => (
+const Select = ({ classes = {}, id, label, list, name, value, register }) => (
   <div css={[select.base, classes.base]}>
     <Listbox
+      ref={register}
       id={id}
       name={name | id}
       as="div"
       css={[select.listBox]}
       value={value}
-      onChange={onChange}
+      register={register}
     >
       {({ open }) => (
         <>
@@ -48,6 +49,7 @@ Select.propTypes = {
   name: PropTypes.string,
   onChange: PropTypes.func,
   value: PropTypes.string,
+  register: PropTypes.any,
 };
 
 export default Select;

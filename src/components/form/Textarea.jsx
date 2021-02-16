@@ -12,6 +12,7 @@ const Textarea = ({
   label,
   name,
   placeholder,
+  register,
   rows,
 }) => (
   <div css={[classes.base]}>
@@ -24,6 +25,7 @@ const Textarea = ({
       classes={classes.textarea}
       name={name}
       id={id}
+      register={register}
       rows={rows}
       placeholder={placeholder}
     />
@@ -57,6 +59,7 @@ Textarea.propTypes = {
   label: PropTypes.string,
   name: PropTypes.string,
   placeholder: PropTypes.string,
+  register: PropTypes.any,
   rows: PropTypes.number,
 };
 
