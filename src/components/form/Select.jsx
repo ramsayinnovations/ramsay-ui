@@ -46,8 +46,8 @@ Select.propTypes = {
   label: PropTypes.string,
   list: PropTypes.arrayOf(PropTypes.string),
   name: PropTypes.string,
-  onChange: PropTypes.func,
-  value: PropTypes.string,
+  onChange: PropTypes.any,
+  value: PropTypes.any,
 };
 
 export default Select;
