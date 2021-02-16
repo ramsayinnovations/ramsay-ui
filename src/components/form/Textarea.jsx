@@ -3,6 +3,7 @@ import Label from "./Label";
 import Help from "./Help";
 import Error from "./Error";
 import TextareaBase from "./TextareaBase";
+import theme from "@/themes/theme";
 
 const Textarea = ({
   classes = {},
@@ -14,7 +15,7 @@ const Textarea = ({
   placeholder,
   rows,
 }) => (
-  <div css={[classes.base]}>
+  <div css={[theme.textarea.wrapper, classes.base]}>
     {label && (
       <Label name={name} className={classes.label}>
         {label}

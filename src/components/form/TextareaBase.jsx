@@ -2,7 +2,7 @@ import theme from "@/themes/theme";
 import PropTypes from "prop-types";
 
 const TextareaBase = ({ classes = {}, id, name, placeholder, rows }) => (
-  <div css={[theme.textarea.wrapper, classes.wrapper]}>
+  <div css={[classes.wrapper]}>
     <textarea
       id={id}
       name={name || id}
