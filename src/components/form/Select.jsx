@@ -5,13 +5,17 @@ import Label from "./Label";
 import SelectButton from "./SelectButton";
 import SelectOptions from "./SelectOptions";
 
+const {
+  form: { select },
+} = theme;
+
 const Select = ({ classes = {}, id, label, list, name, onChange, value }) => (
-  <div css={[theme.select.base, classes.base]}>
+  <div css={[select.base, classes.base]}>
     <Listbox
       id={id}
       name={name | id}
       as="div"
-      css={[theme.select.listBox]}
+      css={[select.listBox]}
       value={value}
       onChange={onChange}
     >
@@ -20,9 +24,9 @@ const Select = ({ classes = {}, id, label, list, name, onChange, value }) => (
           <Label name={name} className={classes.label}>
             {label}
           </Label>
-          <div css={[theme.select.main]}>
-            <span css={[theme.select.buttonWrapper]}>
-              <SelectButton value={value} />
+          <div css={[select.main]}>
+            <span css={[select.buttonWrapper]}>
+              <SelectButton value={value} className={classes.button} />
             </span>
             <SelectOptions open={open} list={list} />
           </div>
@@ -36,6 +40,7 @@ Select.propTypes = {
   classes: PropTypes.shape({
     base: PropTypes.string,
     label: PropTypes.string,
+    button: PropTypes.string,
   }),
   id: PropTypes.string,
   label: PropTypes.string,

@@ -2,12 +2,16 @@ import { Listbox } from "@headlessui/react";
 import theme from "@/themes/theme";
 import PropTypes from "prop-types";
 
+const {
+  form: { select },
+} = theme;
+
 const SelectButton = ({ className, value }) => (
-  <Listbox.Button css={[theme.select.button.base, className]}>
-    <span css={[theme.select.button.value]}>{value}</span>
-    <span css={[theme.select.button.iconWrapper]}>
+  <Listbox.Button css={[select.button.base, className]}>
+    <span css={[select.button.value]}>{value}</span>
+    <span css={[select.button.iconWrapper]}>
       <svg
-        css={[theme.select.button.icon]}
+        css={[select.button.icon]}
         viewBox="0 0 20 20"
         fill="none"
         stroke="currentColor"

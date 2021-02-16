@@ -1,13 +1,17 @@
 import theme from "@/themes/theme";
 import PropTypes from "prop-types";
 
+const {
+  form: { textarea },
+} = theme;
+
 const TextareaBase = ({ classes = {}, id, name, placeholder, rows }) => (
-  <div css={[theme.textarea.wrapper, classes.wrapper]}>
+  <div css={[textarea.wrapper, classes.wrapper]}>
     <textarea
       id={id}
       name={name || id}
       rows={rows || 3}
-      css={[theme.textarea.base, classes.base]}
+      css={[textarea.base, classes.base]}
       placeholder={placeholder}
     ></textarea>
   </div>

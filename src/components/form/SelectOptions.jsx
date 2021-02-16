@@ -3,15 +3,19 @@ import theme from "@/themes/theme";
 import PropTypes from "prop-types";
 import SelectOption from "./SelectOption";
 
+const {
+  form: { select },
+} = theme;
+
 const SelectOptions = ({ list, open }) => (
   <Transition
     show={open}
     leave="transition ease-in duration-100"
     leaveFrom="opacity-100"
     leaveTo="opacity-0"
-    css={[theme.select.options.transition]}
+    css={[select.options.transition]}
   >
-    <Listbox.Options static css={[theme.select.options.base]}>
+    <Listbox.Options static css={[select.options.base]}>
       {list.map((el, index) => (
         <SelectOption key={index} el={el} />
       ))}

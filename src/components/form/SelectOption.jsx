@@ -2,21 +2,25 @@ import { Listbox } from "@headlessui/react";
 import theme from "@/themes/theme";
 import PropTypes from "prop-types";
 
+const {
+  form: { select },
+} = theme;
+
 const SelectOption = ({ el }) => (
   <Listbox.Option key={el} value={el}>
     {({ selected, active }) => (
       <div
         css={[
-          theme.select.option.base,
-          theme.select.option.color.default,
-          active && theme.select.option.color.active,
+          select.option.base,
+          select.option.color.default,
+          active && select.option.color.active,
         ]}
       >
         <span
           css={[
-            theme.select.option.value.base,
-            theme.select.option.value.color.default,
-            selected && theme.select.option.value.color.selected,
+            select.option.value.base,
+            select.option.value.color.default,
+            selected && select.option.value.color.selected,
           ]}
         >
           {el}
@@ -24,13 +28,13 @@ const SelectOption = ({ el }) => (
         {selected && (
           <span
             css={[
-              theme.select.option.selectedValue.base,
-              theme.select.option.selectedValue.default,
-              active && theme.select.option.selectedValue.active,
+              select.option.selectedValue.base,
+              select.option.selectedValue.default,
+              active && select.option.selectedValue.active,
             ]}
           >
             <svg
-              css={[theme.select.option.selectedValue.svg]}
+              css={[select.option.selectedValue.svg]}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="currentColor"
