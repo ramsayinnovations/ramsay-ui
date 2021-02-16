@@ -9,7 +9,7 @@ const {
   form: { select },
 } = theme;
 
-const Select = ({ classes = {}, id, label, list, name, value, setValue }) => (
+const Select = ({ classes = {}, id, label, list, name, value, onChange }) => (
   <div css={[select.base, classes.base]}>
     <Listbox
       id={id}
@@ -17,7 +17,7 @@ const Select = ({ classes = {}, id, label, list, name, value, setValue }) => (
       as="div"
       css={[select.listBox]}
       value={value}
-      onChange={(val) => setValue(name, val)}
+      onChange={(val) => onChange(val)}
     >
       {({ open }) => (
         <>
@@ -46,7 +46,7 @@ Select.propTypes = {
   label: PropTypes.string,
   list: PropTypes.arrayOf(PropTypes.string),
   name: PropTypes.string,
-  setValue: PropTypes.func,
+  onChange: PropTypes.func,
   value: PropTypes.string,
 };
 
