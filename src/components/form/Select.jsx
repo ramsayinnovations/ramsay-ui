@@ -17,7 +17,7 @@ const Select = ({ classes = {}, id, label, list, name, value, setValue }) => (
       as="div"
       css={[select.listBox]}
       value={value}
-      onChange={(e) => setValue(name, e.target.value)}
+      onChange={(val) => setValue(name, val)}
     >
       {({ open }) => (
         <>
