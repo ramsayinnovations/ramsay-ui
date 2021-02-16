@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import CurveSvg from "@/assets/svg/curve.svg";
 import CurveInvertedSvg from "@/assets/svg/curve_inverted.svg";
 
-const isBottom = tw`bottom-0`;
+const isBottom = tw`-bottom-px`;
 const isTop = tw`top-0`;
 const isInverted = tw`transform rotate-180`;
 
