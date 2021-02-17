@@ -37,7 +37,10 @@ const Select = ({
             <span css={[select.buttonWrapper]}>
               <SelectButton
                 value={value}
-                className={classes.button}
+                classes={{
+                  base: classes.button,
+                  placeholder: classes.buttonPlaceholder,
+                }}
                 placeholder={placeholder}
               />
             </span>
@@ -53,6 +56,7 @@ Select.propTypes = {
   classes: PropTypes.shape({
     base: PropTypes.string,
     label: PropTypes.string,
+    buttonPlaceholder: PropTypes.string,
     button: PropTypes.string,
   }),
   id: PropTypes.string,

@@ -6,13 +6,15 @@ const {
   form: { select },
 } = theme;
 
-const SelectButton = ({ className, value, placeholder }) => {
+const SelectButton = ({ classes = {}, value, placeholder }) => {
   const shouldRenderPlaceholder = (!value || !value?.length) && placeholder;
 
   return (
-    <Listbox.Button css={[select.button.base, className]}>
+    <Listbox.Button css={[select.button.base, classes?.base]}>
       {shouldRenderPlaceholder && (
-        <span css={[select.button.placeholder]}>{placeholder}</span>
+        <span css={[select.button.placeholder, classes?.placeholder]}>
+          {placeholder}
+        </span>
       )}
       {!shouldRenderPlaceholder && (
         <span css={[select.button.value]}>{value}</span>
@@ -37,7 +39,10 @@ const SelectButton = ({ className, value, placeholder }) => {
 };
 
 SelectButton.propTypes = {
-  className: PropTypes.string,
+  classes: PropTypes.shape({
+    base: PropTypes.string,
+    placeholder: PropTypes.string,
+  }),
   value: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
 };
