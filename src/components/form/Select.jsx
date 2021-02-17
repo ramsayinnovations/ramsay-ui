@@ -9,7 +9,16 @@ const {
   form: { select },
 } = theme;
 
-const Select = ({ classes = {}, id, label, list, name, value, onChange }) => (
+const Select = ({
+  classes = {},
+  id,
+  label,
+  list,
+  name,
+  value,
+  onChange,
+  placeholder,
+}) => (
   <div css={[select.base, classes.base]}>
     <Listbox
       id={id}
@@ -26,7 +35,11 @@ const Select = ({ classes = {}, id, label, list, name, value, onChange }) => (
           </Label>
           <div css={[select.main]}>
             <span css={[select.buttonWrapper]}>
-              <SelectButton value={value} className={classes.button} />
+              <SelectButton
+                value={value}
+                className={classes.button}
+                placeholder={placeholder}
+              />
             </span>
             <SelectOptions open={open} list={list} />
           </div>
@@ -48,6 +61,7 @@ Select.propTypes = {
   name: PropTypes.string,
   onChange: PropTypes.any,
   value: PropTypes.any,
+  placeholder: PropTypes.string,
 };
 
 export default Select;
