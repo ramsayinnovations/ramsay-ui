@@ -4,6 +4,8 @@ import theme from "@/themes/theme";
 import Label from "./Label";
 import SelectButton from "./SelectButton";
 import SelectOptions from "./SelectOptions";
+import Help from "./Help";
+import Error from "./Error";
 
 const {
   form: { select },
@@ -18,6 +20,8 @@ const Select = ({
   value,
   onChange,
   placeholder,
+  error,
+  help,
 }) => (
   <div css={[select.base, classes.base]}>
     <Listbox
@@ -49,6 +53,16 @@ const Select = ({
         </>
       )}
     </Listbox>
+    {help && (
+      <Help name={name} className={classes.help}>
+        {help}
+      </Help>
+    )}
+    {error && (
+      <Error name={name} className={classes.error}>
+        {error}
+      </Error>
+    )}
   </div>
 );
 
@@ -66,6 +80,8 @@ Select.propTypes = {
   onChange: PropTypes.any,
   value: PropTypes.any,
   placeholder: PropTypes.string,
+  help: PropTypes.string,
+  error: PropTypes.string,
 };
 
 export default Select;
