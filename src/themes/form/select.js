@@ -21,7 +21,7 @@ const select = {
     base: tw`cursor-default select-none relative py-2 pl-8 pr-4`,
     color: {
       default: tw`text-gray-900`,
-      active: tw`text-white bg-blue-600`,
+      active: tw`text-white bg-blue-700`,
     },
     value: {
       base: tw`block truncate`,
@@ -32,7 +32,7 @@ const select = {
     },
     selectedValue: {
       base: tw`absolute inset-y-0 left-0 flex items-center pl-1.5`,
-      default: tw`text-blue-600`,
+      default: tw`text-blue-700`,
       active: tw`text-white`,
       svg: tw`h-5 w-5`,
     },
