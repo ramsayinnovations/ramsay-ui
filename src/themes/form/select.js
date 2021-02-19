@@ -28,7 +28,7 @@ const select = {
       color: {
         default: tw`font-normal`,
         selected: tw`font-semibold text-blue-700`,
-        activeSelected: tw`text-white`,
+        activeSelected: tw`font-semibold text-white`,
       },
     },
     selectedValue: {
