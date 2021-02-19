@@ -13,6 +13,7 @@ const SelectOption = ({ classes = {}, el }) => (
         css={[
           select.option.base,
           select.option.color.default,
+          classes?.option,
           active && select.option.color.active,
         ]}
       >
@@ -20,7 +21,6 @@ const SelectOption = ({ classes = {}, el }) => (
           css={[
             select.option.value.base,
             select.option.value.color.default,
-            classes?.option,
             selected && select.option.value.color.selected,
           ]}
         >
