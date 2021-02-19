@@ -22,6 +22,7 @@ const SelectOption = ({ classes = {}, el }) => (
             select.option.value.base,
             select.option.value.color.default,
             selected && select.option.value.color.selected,
+            active && selected && select.option.value.color.activeSelected,
           ]}
         >
           {el}
