@@ -20,8 +20,8 @@ const SelectOption = ({ classes = {}, el }) => (
           css={[
             select.option.value.base,
             select.option.value.color.default,
-            selected && select.option.value.color.selected,
             classes?.option,
+            selected && select.option.value.color.selected,
           ]}
         >
           {el}
