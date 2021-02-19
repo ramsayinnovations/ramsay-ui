@@ -27,7 +27,7 @@ const select = {
       base: tw`block truncate`,
       color: {
         default: tw`font-normal`,
-        selected: tw`font-semibold`,
+        selected: tw`font-semibold text-blue-700`,
       },
     },
     selectedValue: {
