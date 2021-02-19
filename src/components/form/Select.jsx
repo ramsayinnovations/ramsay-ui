@@ -48,7 +48,11 @@ const Select = ({
                 placeholder={placeholder}
               />
             </span>
-            <SelectOptions open={open} list={list} />
+            <SelectOptions
+              classes={{ option: classes.option }}
+              open={open}
+              list={list}
+            />
           </div>
         </>
       )}
@@ -72,6 +76,7 @@ Select.propTypes = {
     label: PropTypes.string,
     buttonPlaceholder: PropTypes.string,
     button: PropTypes.string,
+    option: PropTypes.string,
   }),
   id: PropTypes.string,
   label: PropTypes.string,

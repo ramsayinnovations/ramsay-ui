@@ -7,7 +7,7 @@ const {
   form: { select },
 } = theme;
 
-const SelectOptions = ({ list, open }) => (
+const SelectOptions = ({ classes = {}, list, open }) => (
   <Transition
     show={open}
     leave="transition ease-in duration-100"
@@ -17,13 +17,20 @@ const SelectOptions = ({ list, open }) => (
   >
     <Listbox.Options static css={[select.options.base]}>
       {list.map((el, index) => (
-        <SelectOption key={index} el={el} />
+        <SelectOption
+          classes={{ option: classes.option }}
+          key={index}
+          el={el}
+        />
       ))}
     </Listbox.Options>
   </Transition>
 );
 
 SelectOptions.propTypes = {
+  classes: PropTypes.shape({
+    option: PropTypes.string,
+  }),
   list: PropTypes.arrayOf(PropTypes.string),
   open: PropTypes.bool,
 };

@@ -6,7 +6,7 @@ const {
   form: { select },
 } = theme;
 
-const SelectOption = ({ el }) => (
+const SelectOption = ({ classes = {}, el }) => (
   <Listbox.Option key={el} value={el}>
     {({ selected, active }) => (
       <div
@@ -21,6 +21,7 @@ const SelectOption = ({ el }) => (
             select.option.value.base,
             select.option.value.color.default,
             selected && select.option.value.color.selected,
+            classes?.option,
           ]}
         >
           {el}
@@ -53,6 +54,9 @@ const SelectOption = ({ el }) => (
 );
 
 SelectOption.propTypes = {
+  classes: PropTypes.shape({
+    option: PropTypes.string,
+  }),
   el: PropTypes.string.isRequired,
 };
 
