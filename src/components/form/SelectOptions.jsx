@@ -18,7 +18,12 @@ const SelectOptions = ({ classes = {}, list, open }) => (
     <Listbox.Options static css={[select.options.base]}>
       {list.map((el, index) => (
         <SelectOption
-          classes={{ option: classes.option }}
+          classes={{
+            option: classes.option,
+            activeOption: classes.activeOption,
+            activeValue: classes.activeValue,
+            selectedValue: classes.selectedValue,
+          }}
           key={index}
           el={el}
         />
@@ -30,6 +35,9 @@ const SelectOptions = ({ classes = {}, list, open }) => (
 SelectOptions.propTypes = {
   classes: PropTypes.shape({
     option: PropTypes.string,
+    activeOption: PropTypes.string,
+    activeValue: PropTypes.string,
+    selectedValue: PropTypes.string,
   }),
   list: PropTypes.arrayOf(PropTypes.string),
   open: PropTypes.bool,

@@ -15,6 +15,7 @@ const SelectOption = ({ classes = {}, el }) => (
           select.option.color.default,
           classes?.option,
           active && select.option.color.active,
+          active && classes?.activeOption,
         ]}
       >
         <span
@@ -23,6 +24,7 @@ const SelectOption = ({ classes = {}, el }) => (
             select.option.value.color.default,
             !active && selected && select.option.value.color.selected,
             active && selected && select.option.value.color.activeSelected,
+            active && selected && classes?.activeValue,
           ]}
         >
           {el}
@@ -33,6 +35,7 @@ const SelectOption = ({ classes = {}, el }) => (
               select.option.selectedValue.base,
               select.option.selectedValue.default,
               active && select.option.selectedValue.active,
+              classes?.selectedValue,
             ]}
           >
             <svg
@@ -57,6 +60,9 @@ const SelectOption = ({ classes = {}, el }) => (
 SelectOption.propTypes = {
   classes: PropTypes.shape({
     option: PropTypes.string,
+    activeOption: PropTypes.string,
+    activeValue: PropTypes.string,
+    selectedValue: PropTypes.string,
   }),
   el: PropTypes.string.isRequired,
 };
