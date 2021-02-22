@@ -23,8 +23,8 @@ const SelectOption = ({ classes = {}, el }) => (
             select.option.value.base,
             select.option.value.color.default,
             !active && selected && select.option.value.color.selected,
+            !active && selected && classes?.activeValue,
             active && selected && select.option.value.color.activeSelected,
-            active && selected && classes?.activeValue,
           ]}
         >
           {el}
@@ -34,8 +34,8 @@ const SelectOption = ({ classes = {}, el }) => (
             css={[
               select.option.selectedValue.base,
               select.option.selectedValue.default,
-              active && select.option.selectedValue.active,
               classes?.selectedValue,
+              active && select.option.selectedValue.active,
             ]}
           >
             <svg
